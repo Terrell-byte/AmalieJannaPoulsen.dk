@@ -26,9 +26,12 @@ class _MainPageState extends State<MainPage> {
   Widget desktopView() {
     return CustomScrollView(
       slivers: <Widget>[
-        const SliverAppBar(
+        SliverAppBar(
           floating: true,
-          title: Text("Test"),
+          backgroundColor: Colors.transparent,
+          actions: [
+            navHomeBtn(),
+          ],
         ),
         SliverList(
           delegate: SliverChildListDelegate(
@@ -58,6 +61,14 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
+  Widget navHomeBtn() {
+    return const ElevatedButton(
+      onPressed: null,
+      child: Text("Home"),
+    );
+  }
+
+  //TO BE DELETED
   Widget home2() {
     return Stack(
       children: [
