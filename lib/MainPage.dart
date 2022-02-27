@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Constants.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -62,10 +64,11 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget navHomeBtn() {
-    return const ElevatedButton(
-      onPressed: null,
-      child: Text("Home"),
-    );
+    return TextButton(
+        onPressed: null,
+        child: Text(
+          tHome,
+        ));
   }
 
   //TO BE DELETED
